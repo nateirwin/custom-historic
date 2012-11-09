@@ -1,0 +1,87 @@
+This documentation explains how to install the Store Software on an individual machine for alpha testing
+
+0- Become root user
+	localhost#su -
+
+1- Configure your apache/httpd server
+open the file /etc/httpd/conf/httpd.conf and add the following lines to the file
+<current store directory>= The directory where the store software is unpacked. For instance: if you unpacked the store file in /opt directory
+	<current store directory> = /opt/store
+
+Alias /store "/store/alpha"
+<Directory "<current store directory>/alpha">
+    Options Indexes FollowSymLinks MultiViews
+    AllowOverride None
+    Order allow,deny
+    Allow from all
+</Directory>
+ 
+Alias /pos "<current store directory>/alpha/pos"
+<Directory "<current store directory>/alpha/pos">
+    Options Indexes FollowSymLinks MultiViews
+    AllowOverride None
+    Order allow,deny
+    Allow from all
+</Directory>
+                                                                                                                                                                   
+Alias /admin "<current store directory>/alpha/admin"
+<Directory "<current store directory>/alpha/admin">
+    Options Indexes FollowSymLinks MultiViews
+    AllowOverride None
+    Order allow,deny
+    Allow from all
+</Directory>
+ 
+Alias /ecomm "<current store directory>/alpha/ecomm"
+<Directory "<current store directory>/alpha/ecomm">
+    Options Indexes FollowSymLinks MultiViews
+    AllowOverride None
+    Order allow,deny
+    Allow from all
+</Directory>
+
+
+2- Restart the apache server. Run the commands below at the prompt
+	hostname#service httpd stop
+	hostname#service httpd start
+
+
+3- Create a mysql database
+	hostname# mysqladmin create store
+	hostname# mysql store < <current store directory>/alpha/db/store.sql
+
+
+4- Verify the database is loaded
+	hostname#mysql store
+	mysql>show tables;
+
+5- Modify <current store directory>/alpha/lib/dbmapper/local.php and <current store directory>/alpha/lib/init/StoreSetup.php
+	
+	Example local.php file
+	
+	define ('STORE_DB_API',         'adodb');
+	define ('STORE_DB',             'mysql');
+	define ('STORE_DB_USER',        'root');
+	define ('STORE_DB_PASS',        '');
+	define ('STORE_DB_VERSION',     'mysql4');
+	define ('STORE_DB_HOST',        'localhost');
+                                                                                                                                                                   
+        	if ($_SERVER["HTTP_HOST"] == "localhost") {
+        	    define ('STORE_NAME',               'default');
+        	    define ('STORE_DOMAIN',             'localhost');
+        	    define ('STORE_DB_NAME',            'store');
+        	} elseif ($_SERVER["HTTP_HOST"] == "127.0.0.1") {
+        	    define ('STORE_NAME',               '127');
+        	    define ('STORE_DOMAIN',             '127');
+        	    define ('STORE_DB_NAME',            'store');
+        	}
+
+	Modify the line below in <current store directory>/alpha/lib/init/StoreSetup.php
+	define('STORE_PATH', '/home/pos/store/alpha');
+
+6- Open a browser and type the URL's below
+	https://localhost/admin
+	https://localhost/pos
+	https://localhost/store
+	
+7- ready to go....

@@ -1,0 +1,91 @@
+<html>
+
+<head>
+	<title>MagickProfileImage</title>
+</head>
+
+<link rel="stylesheet" href="./style.css" type="text/css">
+
+<body>
+
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td height="1" valign="top">
+		<table class="head_foot" width="100%" border="0" cellpadding="5" cellspacing="0">
+		<tr>
+			<td width="30%" align="left" valign="bottom"><br /><a href="./MagickPreviousImage.html">Prev</a></td>
+			<td width="40%" align="center" valign="top"><strong>MagickWand For PHP<br />Manual</strong><br /></td>
+			<td width="30%" align="right" valign="bottom"><br /><a href="./MagickQuantizeImage.html">Next</a></td>
+		</tr>
+		</table>
+	</td>
+</tr>
+
+<tr>
+	<td valign="top">
+
+<div class="main">
+<h1>MagickProfileImage</h1>
+
+<p>MagickProfileImage -- adds or removes a ICC, IPTC, or generic profile from the current active image
+</p>
+
+<h2>Description</h2>
+
+<p>bool <strong>MagickProfileImage</strong>( MagickWand mgck_wnd, string name [, string profile] )
+</p>
+
+<pre>Adds or removes a ICC, IPTC, or generic profile from the current active
+image.
+
+If the profile is NULL, it is removed from the current active image;
+otherwise it is added.
+
+Use a name of '*' and a profile of NULL to remove all profiles from the
+current active image.</pre>
+
+<hr align="left" width="400" height="1" />
+
+<p>A description of each parameter follows:
+
+<br /><br /><table border="1" cellpadding="5" cellspacing="0">
+		<tr>
+			<td><strong>mgck_wnd</strong></td>
+			<td>A MagickWand resource
+			</td>
+		</tr>
+		<tr>
+			<td><strong>name</strong></td>
+			<td>Name of profile to add or remove: ICC, IPTC, or generic profile.
+			</td>
+		</tr>
+		<tr>
+			<td><strong>profile</strong></td>
+			<td>(OPTIONAL) the profile; is NULL by default (for removing a profile/profiles)
+			</td>
+		</tr>
+</table>
+</p>
+
+<br />
+</div>
+
+	</td>
+</tr>
+
+<tr>
+	<td height="1" valign="bottom">
+		<table class="head_foot" width="100%" border="0" cellpadding="5" cellspacing="0">
+		<tr>
+			<td width="30%" align="left" valign="bottom"><a href="./MagickPreviousImage.html">Prev</a><br />MagickPreviousImage</td>
+			<td width="40%" align="center" valign="middle"><a href="./index.html">Up</a></td>
+			<td width="30%" align="right" valign="bottom"><a href="./MagickQuantizeImage.html">Next</a><br />MagickQuantizeImage</td>
+		</tr>
+		</table>
+	</td>
+</tr>
+</table>
+
+</body>
+</html>
+

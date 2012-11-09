@@ -1,0 +1,89 @@
+<html>
+
+<head>
+	<title>DrawPolygon</title>
+</head>
+
+<link rel="stylesheet" href="./style.css" type="text/css">
+
+<body>
+
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td height="1" valign="top">
+		<table class="head_foot" width="100%" border="0" cellpadding="5" cellspacing="0">
+		<tr>
+			<td width="30%" align="left" valign="bottom"><br /><a href="./DrawPoint.html">Prev</a></td>
+			<td width="40%" align="center" valign="top"><strong>MagickWand For PHP<br />Manual</strong><br /></td>
+			<td width="30%" align="right" valign="bottom"><br /><a href="./DrawPolyline.html">Next</a></td>
+		</tr>
+		</table>
+	</td>
+</tr>
+
+<tr>
+	<td valign="top">
+
+<div class="main">
+<h1>DrawPolygon</h1>
+
+<p>DrawPolygon -- draws a polygon using the current stroke, stroke width, and fill color or texture
+</p>
+
+<h2>Description</h2>
+
+<p>void <strong>DrawPolygon</strong>( DrawingWand drw_wnd, array x_y_points_array )
+</p>
+
+<pre>Draws a polygon using the current stroke, stroke width, and fill color or
+texture of the DrawingWand, through a set of points on the image.
+
+The function accepts an EVEN length array, containing a MINIMUM of 6
+numbers numbers, which represent (x, y) points on an image's co-odinate
+system.
+
+Examples:
+   DrawPolygon( $drw_wnd, array( $x1, $y1, $x2, $y2, $x3, $y3 ) );
+   DrawPolygon(
+      $drw_wnd, array( $x1, $y1, $x2, $y2, $x3, $y3, $x4, $y4, $x5, $y5 ) );</pre>
+
+<hr align="left" width="400" height="1" />
+
+<p>A description of each parameter follows:
+
+<br /><br /><table border="1" cellpadding="5" cellspacing="0">
+		<tr>
+			<td><strong>drw_wnd</strong></td>
+			<td>A DrawingWand resource
+			</td>
+		</tr>
+		<tr>
+			<td><strong>x_y_points_array</strong></td>
+			<td>An EVEN length array of numbers representing x and y ordinates
+			</td>
+		</tr>
+</table>
+</p>
+
+<br />
+</div>
+
+	</td>
+</tr>
+
+<tr>
+	<td height="1" valign="bottom">
+		<table class="head_foot" width="100%" border="0" cellpadding="5" cellspacing="0">
+		<tr>
+			<td width="30%" align="left" valign="bottom"><a href="./DrawPoint.html">Prev</a><br />DrawPoint</td>
+			<td width="40%" align="center" valign="middle"><a href="./index.html">Up</a></td>
+			<td width="30%" align="right" valign="bottom"><a href="./DrawPolyline.html">Next</a><br />DrawPolyline</td>
+		</tr>
+		</table>
+	</td>
+</tr>
+</table>
+
+</body>
+</html>
+

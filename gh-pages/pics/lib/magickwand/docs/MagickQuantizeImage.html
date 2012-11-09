@@ -1,0 +1,121 @@
+<html>
+
+<head>
+	<title>MagickQuantizeImage</title>
+</head>
+
+<link rel="stylesheet" href="./style.css" type="text/css">
+
+<body>
+
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td height="1" valign="top">
+		<table class="head_foot" width="100%" border="0" cellpadding="5" cellspacing="0">
+		<tr>
+			<td width="30%" align="left" valign="bottom"><br /><a href="./MagickProfileImage.html">Prev</a></td>
+			<td width="40%" align="center" valign="top"><strong>MagickWand For PHP<br />Manual</strong><br /></td>
+			<td width="30%" align="right" valign="bottom"><br /><a href="./MagickQuantizeImages.html">Next</a></td>
+		</tr>
+		</table>
+	</td>
+</tr>
+
+<tr>
+	<td valign="top">
+
+<div class="main">
+<h1>MagickQuantizeImage</h1>
+
+<p>MagickQuantizeImage -- analyzes the colors within the current active image and chooses a fixed number of colors to represent the image
+</p>
+
+<h2>Description</h2>
+
+<p>bool <strong>MagickQuantizeImage</strong>( MagickWand mgck_wnd, float number_colors, int colorspace_type, float treedepth, bool dither, bool measure_error )
+</p>
+
+<pre>Analyzes the colors within the current active image and chooses a fixed
+number of colors to represent the image.
+
+The goal of the algorithm is to minimize the color difference between the
+original image and the output image while minimizing the processing time.
+
+Returns TRUE on success, FALSE, if an error occurred.
+
+colorspace_type must be a ColorspaceType constant, one of the following:
+   MW_RGBColorspace           MW_GRAYColorspace
+   MW_TransparentColorspace   MW_OHTAColorspace
+   MW_LABColorspace           MW_XYZColorspace
+   MW_YCbCrColorspace         MW_YCCColorspace
+   MW_YIQColorspace           MW_YPbPrColorspace
+   MW_YUVColorspace           MW_CMYKColorspace
+   MW_sRGBColorspace          MW_HSBColorspace
+   MW_HSLColorspace           MW_HWBColorspace</pre>
+
+<hr align="left" width="400" height="1" />
+
+<p>A description of each parameter follows:
+
+<br /><br /><table border="1" cellpadding="5" cellspacing="0">
+		<tr>
+			<td><strong>mgck_wnd</strong></td>
+			<td>A MagickWand resource
+			</td>
+		</tr>
+		<tr>
+			<td><strong>number_colors</strong></td>
+			<td>The number of colors.
+			</td>
+		</tr>
+		<tr>
+			<td><strong>colorspace</strong></td>
+			<td>Perform color reduction in this colorspace, typically MW_RGBColorspace.
+			</td>
+		</tr>
+		<tr>
+			<td><strong>treedepth</strong></td>
+			<td>Normally, this integer value is zero or one.
+				<br />A zero or one tells Quantize to choose a optimal tree depth of Log4(number_colors).
+				<br />A tree of this depth generally allows the best representation of the reference image with the least amount of memory and the fastest computational speed.
+				<br />In some cases, such as an image with low color dispersion ( a few number of colors ), a value other than Log4(number_colors) is required.
+				<br />To expand the color tree completely, use a value of 8.
+			</td>
+		</tr>
+		<tr>
+			<td><strong>dither</strong></td>
+			<td>If TRUE, distributes the difference between an original image and the corresponding color reduced algorithm to neighboring pixels along a Hilbert curve.
+			</td>
+		</tr>
+		<tr>
+			<td><strong>measure_error</strong></td>
+			<td>If TRUE, measures the difference between the original and quantized images.
+				<br />This difference is the total quantization error.
+				<br />The error is computed by summing over all pixels in an image the distance squared in RGB space between each reference pixel value and its quantized value
+			</td>
+		</tr>
+</table>
+</p>
+
+<br />
+</div>
+
+	</td>
+</tr>
+
+<tr>
+	<td height="1" valign="bottom">
+		<table class="head_foot" width="100%" border="0" cellpadding="5" cellspacing="0">
+		<tr>
+			<td width="30%" align="left" valign="bottom"><a href="./MagickProfileImage.html">Prev</a><br />MagickProfileImage</td>
+			<td width="40%" align="center" valign="middle"><a href="./index.html">Up</a></td>
+			<td width="30%" align="right" valign="bottom"><a href="./MagickQuantizeImages.html">Next</a><br />MagickQuantizeImages</td>
+		</tr>
+		</table>
+	</td>
+</tr>
+</table>
+
+</body>
+</html>
+

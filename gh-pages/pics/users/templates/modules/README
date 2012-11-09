@@ -1,0 +1,15 @@
+Modules are the code segments that can be shared among multiple pages.
+The directory templates/modules contains only the html code for the modules
+The directory lib/modules		contains the php code for the modules
+
+Some modules may not have any php code behind them such as login module. The segments of 
+code, which do NOT require any html code but is used by more than one page are not considered a module. 
+And they probably are under lib/commServs directory such as session management.
+
+Template modules 
+
+-- login
+module which shows the login box
+
+-- greetings
+module which prints Welcome {$user} code

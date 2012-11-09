@@ -1,0 +1,111 @@
+<html>
+
+<head>
+	<title>MagickGetTextDescent</title>
+</head>
+
+<link rel="stylesheet" href="./style.css" type="text/css">
+
+<body>
+
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td height="1" valign="top">
+		<table class="head_foot" width="100%" border="0" cellpadding="5" cellspacing="0">
+		<tr>
+			<td width="30%" align="left" valign="bottom"><br /><a href="./MagickGetTextAscent.html">Prev</a></td>
+			<td width="40%" align="center" valign="top"><strong>MagickWand For PHP<br />Manual</strong><br /></td>
+			<td width="30%" align="right" valign="bottom"><br /><a href="./MagickGetVersion.html">Next</a></td>
+		</tr>
+		</table>
+	</td>
+</tr>
+
+<tr>
+	<td valign="top">
+
+<div class="main">
+<h1>MagickGetTextDescent</h1>
+
+<p>MagickGetTextDescent -- returns the maximum character descent of characters in a specified string
+</p>
+
+<h2>Description</h2>
+
+<p>float <strong>MagickGetTextDescent</strong>( MagickWand mgck_wnd, DrawingWand drw_wnd, string txt [, bool multiline] )
+</p>
+
+<pre>Returns the maximum character descent (height of part of character drawn
+below font's baseline) of characters in a specified string, or FALSE, if
+an error occurs.
+
+This function actually calls the C API's <a href="./MagickQueryFontMetrics.html">MagickQueryFontMetrics()</a>, but
+only returns one of the array elements.
+
+If you are going to be calling more than 1 of the following functions at a
+time, it is suggested that you call PHP's <a href="./MagickQueryFontMetrics.html">MagickQueryFontMetrics()</a>, and
+use the array members it returns:
+   <a href="./MagickGetCharWidth.html">MagickGetCharWidth()</a>
+   <a href="./MagickGetCharHeight.html">MagickGetCharHeight()</a>
+   <a href="./MagickGetTextAscent.html">MagickGetTextAscent()</a>
+   <a href="./MagickGetTextDescent.html">MagickGetTextDescent()</a>
+   <a href="./MagickGetStringWidth.html">MagickGetStringWidth()</a>
+   <a href="./MagickGetStringHeight.html">MagickGetStringHeight()</a>
+   <a href="./MagickGetMaxTextAdvance.html">MagickGetMaxTextAdvance()</a>
+
+If multiline is specified, and is TRUE, the C API's
+<a href="./MagickQueryMultilineFontMetrics.html">MagickQueryMultilineFontMetrics()</a> is called internally instead.
+
+It returns the same kind of array as <a href="./MagickQueryFontMetrics.html">MagickQueryFontMetrics()</a>, but with
+the metrics returned being those of multiple lines of text.</pre>
+
+<hr align="left" width="400" height="1" />
+
+<p>A description of each parameter follows:
+
+<br /><br /><table border="1" cellpadding="5" cellspacing="0">
+		<tr>
+			<td><strong>mgck_wnd</strong></td>
+			<td>The MagickWand
+			</td>
+		</tr>
+		<tr>
+			<td><strong>drw_wnd</strong></td>
+			<td>The DrawingWand (contains the font information)
+			</td>
+		</tr>
+		<tr>
+			<td><strong>text</strong></td>
+			<td>The text
+			</td>
+		</tr>
+		<tr>
+			<td><strong>multiline</strong></td>
+			<td>(Optional) if TRUE, causes function to return metric associated with muliple lines of text
+			</td>
+		</tr>
+</table>
+</p>
+
+<br />
+</div>
+
+	</td>
+</tr>
+
+<tr>
+	<td height="1" valign="bottom">
+		<table class="head_foot" width="100%" border="0" cellpadding="5" cellspacing="0">
+		<tr>
+			<td width="30%" align="left" valign="bottom"><a href="./MagickGetTextAscent.html">Prev</a><br />MagickGetTextAscent</td>
+			<td width="40%" align="center" valign="middle"><a href="./index.html">Up</a></td>
+			<td width="30%" align="right" valign="bottom"><a href="./MagickGetVersion.html">Next</a><br />MagickGetVersion</td>
+		</tr>
+		</table>
+	</td>
+</tr>
+</table>
+
+</body>
+</html>
+

@@ -1,0 +1,107 @@
+<html>
+
+<head>
+	<title>DrawPushPattern</title>
+</head>
+
+<link rel="stylesheet" href="./style.css" type="text/css">
+
+<body>
+
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td height="1" valign="top">
+		<table class="head_foot" width="100%" border="0" cellpadding="5" cellspacing="0">
+		<tr>
+			<td width="30%" align="left" valign="bottom"><br /><a href="./DrawPushDefs.html">Prev</a></td>
+			<td width="40%" align="center" valign="top"><strong>MagickWand For PHP<br />Manual</strong><br /></td>
+			<td width="30%" align="right" valign="bottom"><br /><a href="./DrawRectangle.html">Next</a></td>
+		</tr>
+		</table>
+	</td>
+</tr>
+
+<tr>
+	<td valign="top">
+
+<div class="main">
+<h1>DrawPushPattern</h1>
+
+<p>DrawPushPattern -- starts the definition of a named pattern
+</p>
+
+<h2>Description</h2>
+
+<p>bool <strong>DrawPushPattern</strong>( DrawingWand drw_wnd, string pattern_id, float x, float y, float width, float height )
+</p>
+
+<pre>DrawPushPattern() indicates that subsequent commands up to a
+<a href="./DrawPopPattern.html">DrawPopPattern()</a> command comprise the definition of a named pattern.
+
+The pattern space is assigned top left corner coordinates, a width and
+height, and becomes its own drawing space.
+
+Anything which can be drawn may be used in a pattern definition.
+
+Named patterns may be used as stroke or brush definitions.</pre>
+
+<hr align="left" width="400" height="1" />
+
+<p>A description of each parameter follows:
+
+<br /><br /><table border="1" cellpadding="5" cellspacing="0">
+		<tr>
+			<td><strong>drw_wnd</strong></td>
+			<td>A DrawingWand resource
+			</td>
+		</tr>
+		<tr>
+			<td><strong>pattern_id</strong></td>
+			<td>Pattern identification for later reference
+			</td>
+		</tr>
+		<tr>
+			<td><strong>x</strong></td>
+			<td>X ordinate of top left corner
+			</td>
+		</tr>
+		<tr>
+			<td><strong>y</strong></td>
+			<td>Y ordinate of top left corner
+			</td>
+		</tr>
+		<tr>
+			<td><strong>width</strong></td>
+			<td>Width of pattern space
+			</td>
+		</tr>
+		<tr>
+			<td><strong>height</strong></td>
+			<td>Height of pattern space
+			</td>
+		</tr>
+</table>
+</p>
+
+<br />
+</div>
+
+	</td>
+</tr>
+
+<tr>
+	<td height="1" valign="bottom">
+		<table class="head_foot" width="100%" border="0" cellpadding="5" cellspacing="0">
+		<tr>
+			<td width="30%" align="left" valign="bottom"><a href="./DrawPushDefs.html">Prev</a><br />DrawPushDefs</td>
+			<td width="40%" align="center" valign="middle"><a href="./index.html">Up</a></td>
+			<td width="30%" align="right" valign="bottom"><a href="./DrawRectangle.html">Next</a><br />DrawRectangle</td>
+		</tr>
+		</table>
+	</td>
+</tr>
+</table>
+
+</body>
+</html>
+

@@ -1,0 +1,121 @@
+<html>
+
+<head>
+	<title>MagickLevelImage</title>
+</head>
+
+<link rel="stylesheet" href="./style.css" type="text/css">
+
+<body>
+
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td height="1" valign="top">
+		<table class="head_foot" width="100%" border="0" cellpadding="5" cellspacing="0">
+		<tr>
+			<td width="30%" align="left" valign="bottom"><br /><a href="./MagickLabelImage.html">Prev</a></td>
+			<td width="40%" align="center" valign="top"><strong>MagickWand For PHP<br />Manual</strong><br /></td>
+			<td width="30%" align="right" valign="bottom"><br /><a href="./MagickMagnifyImage.html">Next</a></td>
+		</tr>
+		</table>
+	</td>
+</tr>
+
+<tr>
+	<td valign="top">
+
+<div class="main">
+<h1>MagickLevelImage</h1>
+
+<p>MagickLevelImage -- adjusts the levels of the current active image or one of its image channels
+</p>
+
+<h2>Description</h2>
+
+<p>bool <strong>MagickLevelImage</strong>( MagickWand mgck_wnd, float black_point, float gamma, float white_point [, int channel_type] )
+</p>
+
+<pre>Adjusts the levels of the current active image (or of the specified image
+channel) by scaling the colors falling between specified white and black
+points to the full available quantum range.
+
+The parameters provided represent the black, mid, and white  points.
+
+The black point specifies the darkest color in the image.
+
+Colors darker than the black point are set to zero.
+
+Mid point specifies a gamma correction to apply to the image.
+
+White point specifies the lightest color in the image.
+
+Colors brighter than the white point are set to the maximum quantum value.
+
+Returns TRUE if successful, FALSE if an error occurred.
+
+If the optional channel_type parameter is specified,
+<a href="./MagickLevelImageChannel.html">MagickLevelImageChannel()</a> is called on that particular image channel.
+
+channel_type must be a ChannelType constant, one of the following:
+   MW_RedChannel        MW_CyanChannel
+   MW_GreenChannel      MW_MagentaChannel
+   MW_BlueChannel       MW_YellowChannel
+   MW_AlphaChannel      MW_OpacityChannel
+   MW_BlackChannel      MW_IndexChannel
+   MW_AllChannels</pre>
+
+<hr align="left" width="400" height="1" />
+
+<p>A description of each parameter follows:
+
+<br /><br /><table border="1" cellpadding="5" cellspacing="0">
+		<tr>
+			<td><strong>mgck_wnd</strong></td>
+			<td>A MagickWand resource
+			</td>
+		</tr>
+		<tr>
+			<td><strong>black_point</strong></td>
+			<td>The black point
+			</td>
+		</tr>
+		<tr>
+			<td><strong>gamma</strong></td>
+			<td>The gamma
+			</td>
+		</tr>
+		<tr>
+			<td><strong>white_point</strong></td>
+			<td>The white point
+			</td>
+		</tr>
+		<tr>
+			<td><strong>channel_type</strong></td>
+			<td>(OPTIONAL) ChannelType constant
+			</td>
+		</tr>
+</table>
+</p>
+
+<br />
+</div>
+
+	</td>
+</tr>
+
+<tr>
+	<td height="1" valign="bottom">
+		<table class="head_foot" width="100%" border="0" cellpadding="5" cellspacing="0">
+		<tr>
+			<td width="30%" align="left" valign="bottom"><a href="./MagickLabelImage.html">Prev</a><br />MagickLabelImage</td>
+			<td width="40%" align="center" valign="middle"><a href="./index.html">Up</a></td>
+			<td width="30%" align="right" valign="bottom"><a href="./MagickMagnifyImage.html">Next</a><br />MagickMagnifyImage</td>
+		</tr>
+		</table>
+	</td>
+</tr>
+</table>
+
+</body>
+</html>
+

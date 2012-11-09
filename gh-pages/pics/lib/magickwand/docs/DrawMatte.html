@@ -1,0 +1,100 @@
+<html>
+
+<head>
+	<title>DrawMatte</title>
+</head>
+
+<link rel="stylesheet" href="./style.css" type="text/css">
+
+<body>
+
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td height="1" valign="top">
+		<table class="head_foot" width="100%" border="0" cellpadding="5" cellspacing="0">
+		<tr>
+			<td width="30%" align="left" valign="bottom"><br /><a href="./DrawLine.html">Prev</a></td>
+			<td width="40%" align="center" valign="top"><strong>MagickWand For PHP<br />Manual</strong><br /></td>
+			<td width="30%" align="right" valign="bottom"><br /><a href="./DrawPathClose.html">Next</a></td>
+		</tr>
+		</table>
+	</td>
+</tr>
+
+<tr>
+	<td valign="top">
+
+<div class="main">
+<h1>DrawMatte</h1>
+
+<p>DrawMatte -- paints on the image's opacity channel in order to set affected pixels to transparent
+</p>
+
+<h2>Description</h2>
+
+<p>void <strong>DrawMatte</strong>( DrawingWand drw_wnd, float x, float y, int paint_method )
+</p>
+
+<pre>Paints on the image's opacity channel in order to set affected pixels to
+transparent, starting at the position specified by (x, y), and using the
+specified paint method, paint_method.
+
+paint_method must be one of the available paint methods, (i.e.: A
+PaintMethod constant), one of the following:
+   MW_PointMethod:        Select the target pixel.
+   MW_ReplaceMethod:      Select any pixel that matches the target pixel.
+   MW_FloodfillMethod:    Select the target pixel and matching neighbors.
+   MW_FillToBorderMethod: Select the target pixel and neighbors not
+                          matching border color.
+   MW_ResetMethod:        Select all pixels.</pre>
+
+<hr align="left" width="400" height="1" />
+
+<p>A description of each parameter follows:
+
+<br /><br /><table border="1" cellpadding="5" cellspacing="0">
+		<tr>
+			<td><strong>drw_wnd</strong></td>
+			<td>A DrawingWand resource
+			</td>
+		</tr>
+		<tr>
+			<td><strong>x</strong></td>
+			<td>The x ordinate of the start position
+			</td>
+		</tr>
+		<tr>
+			<td><strong>y</strong></td>
+			<td>The y ordinate of the start position
+			</td>
+		</tr>
+		<tr>
+			<td><strong>paint_method</strong></td>
+			<td>A PaintMethod constant
+			</td>
+		</tr>
+</table>
+</p>
+
+<br />
+</div>
+
+	</td>
+</tr>
+
+<tr>
+	<td height="1" valign="bottom">
+		<table class="head_foot" width="100%" border="0" cellpadding="5" cellspacing="0">
+		<tr>
+			<td width="30%" align="left" valign="bottom"><a href="./DrawLine.html">Prev</a><br />DrawLine</td>
+			<td width="40%" align="center" valign="middle"><a href="./index.html">Up</a></td>
+			<td width="30%" align="right" valign="bottom"><a href="./DrawPathClose.html">Next</a><br />DrawPathClose</td>
+		</tr>
+		</table>
+	</td>
+</tr>
+</table>
+
+</body>
+</html>
+

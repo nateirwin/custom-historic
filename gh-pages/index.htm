@@ -1,0 +1,201 @@
+<html>
+<head>
+<title>CUSTOM HISTORIC MILLWORK</title>
+<script language="JavaScript">
+<!-- Begin
+var interval = 1.5; // delay between rotating images (in seconds)
+var random_display = 1; // 0 = sequential, 1 = random
+interval *= 1000;
+
+var image_index = 0;
+image_list = new Array();
+image_list[image_index++] = new imageItem("Images/kapak/kapak_7.jpg");
+image_list[image_index++] = new imageItem("Images/kapak/kapak_8.jpg");
+image_list[image_index++] = new imageItem("Images/kapak/kapak_1.jpg");
+image_list[image_index++] = new imageItem("Images/kapak/kapak_2.jpg");
+image_list[image_index++] = new imageItem("Images/kapak/kapak_3.jpg");
+image_list[image_index++] = new imageItem("Images/kapak/kapak_4.jpg");
+image_list[image_index++] = new imageItem("Images/kapak/kapak_5.jpg");
+image_list[image_index++] = new imageItem("Images/kapak/kapak_6.jpg");
+image_list[image_index++] = new imageItem("Images/kapak/kapak_9.jpg");
+image_list[image_index++] = new imageItem("Images/kapak/kapak_10.jpg");
+image_list[image_index++] = new imageItem("Images/kapak/kapak_11.jpg");
+
+var number_of_image = image_list.length;
+function imageItem(image_location) {
+this.image_item = new Image();
+this.image_item.src = image_location;
+}
+function get_ImageItemLocation(imageObj) {
+return(imageObj.image_item.src)
+}
+function generate(x, y) {
+var range = y - x + 1;
+return Math.floor(Math.random() * range) + x;
+}
+function getNextImage() {
+if (random_display) {
+image_index = generate(0, number_of_image-1);
+}
+else {
+image_index = (image_index+1) % number_of_image;
+}
+var new_image = get_ImageItemLocation(image_list[image_index]);
+return(new_image);
+}
+function rotateImage(place) {
+var new_image = getNextImage();
+document[place].src = new_image;
+var recur_call = "rotateImage('"+place+"')";
+setTimeout(recur_call, interval);
+}
+//  End -->
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script language="JavaScript">
+<!--
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+// -->
+
+function MM_timelineGoto(tmLnName, fNew, numGotos) { //v2.0
+  //Copyright 1997 Macromedia, Inc. All rights reserved.
+  var i,j,tmLn,props,keyFrm,sprite,numKeyFr,firstKeyFr,lastKeyFr,propNum,theObj;
+  if (document.MM_Time == null) MM_initTimelines(); //if *very* 1st time
+  tmLn = document.MM_Time[tmLnName];
+  if (numGotos != null)
+    if (tmLn.gotoCount == null) tmLn.gotoCount = 1;
+    else if (tmLn.gotoCount++ >= numGotos) {tmLn.gotoCount=0; return}
+  jmpFwd = (fNew > tmLn.curFrame);
+  for (i = 0; i < tmLn.length; i++) {
+    sprite = (jmpFwd)? tmLn[i] : tmLn[(tmLn.length-1)-i]; //count bkwds if jumping back
+    if (sprite.charAt(0) == "s") {
+      numKeyFr = sprite.keyFrames.length;
+      firstKeyFr = sprite.keyFrames[0];
+      lastKeyFr = sprite.keyFrames[numKeyFr - 1];
+      if ((jmpFwd && fNew<firstKeyFr) || (!jmpFwd && lastKeyFr<fNew)) continue; //skip if untouchd
+      for (keyFrm=1; keyFrm<numKeyFr && fNew>=sprite.keyFrames[keyFrm]; keyFrm++);
+      for (j=0; j<sprite.values.length; j++) {
+        props = sprite.values[j];
+        if (numKeyFr == props.length) propNum = keyFrm-1 //keyframes only
+        else propNum = Math.min(Math.max(0,fNew-firstKeyFr),props.length-1); //or keep in legal range
+        if (sprite.obj != null) {
+          if (props.prop2 == null) sprite.obj[props.prop] = props[propNum];
+          else        sprite.obj[props.prop2][props.prop] = props[propNum];
+      } }
+    } else if (sprite.charAt(0)=='b' && fNew == sprite.frame) eval(sprite.value);
+  }
+  tmLn.curFrame = fNew;
+  if (tmLn.ID == 0) eval('MM_timelinePlay(tmLnName)');
+}
+
+function MM_timelinePlay(tmLnName, myID) { //v1.2
+  //Copyright 1997 Macromedia, Inc. All rights reserved.
+  var i,j,tmLn,props,keyFrm,sprite,numKeyFr,firstKeyFr,propNum,theObj,firstTime=false;
+  if (document.MM_Time == null) MM_initTimelines(); //if *very* 1st time
+  tmLn = document.MM_Time[tmLnName];
+  if (myID == null) { myID = ++tmLn.ID; firstTime=true;}//if new call, incr ID
+  if (myID == tmLn.ID) { //if Im newest
+    setTimeout('MM_timelinePlay("'+tmLnName+'",'+myID+')',tmLn.delay);
+    fNew = ++tmLn.curFrame;
+    for (i=0; i<tmLn.length; i++) {
+      sprite = tmLn[i];
+      if (sprite.charAt(0) == 's') {
+        if (sprite.obj) {
+          numKeyFr = sprite.keyFrames.length; firstKeyFr = sprite.keyFrames[0];
+          if (fNew >= firstKeyFr && fNew <= sprite.keyFrames[numKeyFr-1]) {//in range
+            keyFrm=1;
+            for (j=0; j<sprite.values.length; j++) {
+              props = sprite.values[j]; 
+              if (numKeyFr != props.length) {
+                if (props.prop2 == null) sprite.obj[props.prop] = props[fNew-firstKeyFr];
+                else        sprite.obj[props.prop2][props.prop] = props[fNew-firstKeyFr];
+              } else {
+                while (keyFrm<numKeyFr && fNew>=sprite.keyFrames[keyFrm]) keyFrm++;
+                if (firstTime || fNew==sprite.keyFrames[keyFrm-1]) {
+                  if (props.prop2 == null) sprite.obj[props.prop] = props[keyFrm-1];
+                  else        sprite.obj[props.prop2][props.prop] = props[keyFrm-1];
+        } } } } }
+      } else if (sprite.charAt(0)=='b' && fNew == sprite.frame) eval(sprite.value);
+      if (fNew > tmLn.lastFrame) tmLn.ID = 0;
+  } }
+}
+
+function MM_initTimelines() { //v4.0
+    //MM_initTimelines() Copyright 1997 Macromedia, Inc. All rights reserved.
+    var ns = navigator.appName == "Netscape";
+    var ns4 = (ns && parseInt(navigator.appVersion) == 4);
+    var ns5 = (ns && parseInt(navigator.appVersion) > 4);
+    document.MM_Time = new Array(1);
+    document.MM_Time[0] = new Array(1);
+    document.MM_Time["Timeline1"] = document.MM_Time[0];
+    document.MM_Time[0].MM_Name = "Timeline1";
+    document.MM_Time[0].fps = 15;
+    document.MM_Time[0][0] = new String("behavior");
+    document.MM_Time[0][0].frame = 121;
+    document.MM_Time[0][0].value = "MM_timelineGoto('Timeline1','1')";
+    document.MM_Time[0].lastFrame = 121;
+    for (i=0; i<document.MM_Time.length; i++) {
+        document.MM_Time[i].ID = null;
+        document.MM_Time[i].curFrame = 0;
+        document.MM_Time[i].delay = 1000/document.MM_Time[i].fps;
+    }
+}
+//-->
+</script>
+</head>
+
+<body bgcolor="#003333" text="#000000" link="#990000" vlink="#990000" onload="rotateImage('rImage')">
+
+<center>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p><br>
+  </p>
+</center>
+<table width="60%" border="0" align="center" height="50%">
+  <tr> 
+    <td colspan="7" height="197"> <div align="center"> 
+        <table width="100%" border="0" height="230">
+          <tr valign="bottom"> 
+            <td> <p align="left">&nbsp;</p>
+              <p align="center"><font color="#999933" face="Book Antiqua"><i><font size="4">Preserving 
+                the past and<br>
+                </font></i></font><font color="#999933" face="Book Antiqua"><i><font size="4">building 
+                the future...</font></i></font></p>
+              <p align="left"><img src="Images/title.gif" width="245" height="100"></p></td>
+            <td bgcolor="#FFFFFF" align="center" valign="middle"> <div align="center"><img name="rImage" src="Images/kapak/kapak_5.jpg" width=280 height=210></div></td>
+          </tr>
+          <tr valign="bottom">
+            <td><a href="https://69.93.237.37/%7Elaurie/pics/users/index.php"><font color="#FFFFFF"><strong>Customer 
+              Access</strong></font></a> </td>
+            <td bgcolor="#003333" align="center" valign="middle">&nbsp;</td>
+          </tr>
+        </table>
+      </div></td>
+  </tr>
+  <tr align="center" valign="middle"> 
+    <td height="58" width="16%" background="Images/Wood057.jpg"> <div align="center"><font face="Book Antiqua" size="2" color="#990000"><b><a href="MAIN.htm">MAIN</a></b></font></div></td>
+    <td height="58" width="16%" background="Images/Wood057.jpg"> <div align="center"><font face="Book Antiqua" size="2" color="#990000"><b><a href="ABOUT_US.htm">ABOUT 
+        US</a></b></font></div></td>
+    <td height="58" width="16%" background="Images/Wood057.jpg"> <div align="center"><font face="Book Antiqua" size="2" color="#990000"><b><a href="PRODUCTS.htm">PRODUCTS</a></b></font></div></td>
+    <td width="16%" background="Images/Wood057.jpg"><font face="Book Antiqua" size="2" color="#990000"><b><a href="CATALOG.htm">CATALOG</a></b></font></td>
+    <td height="58" width="16%" background="Images/Wood057.jpg"> <div align="center"><font face="Book Antiqua" size="2" color="#990000"><b><a href="SERVICES.htm">SERVICES</a></b></font></div></td>
+    <td height="58" width="16%" background="Images/Wood057.jpg"> <div align="center"><font face="Book Antiqua" size="2" color="#990000"><b><a href="REFERENCES.htm">REFERENCES</a></b></font></div></td>
+    <td height="58" width="16%" background="Images/Wood057.jpg" bgcolor="#FFFFFF"> 
+      <div align="center"><font face="Book Antiqua" size="2" color="#990000"><b><a href="CONTACT.htm">CONTACT</a></b></font></div></td>
+  </tr>
+</table>
+<div align="right"><br>
+  <br>
+  <br>
+  <a href="http://www.collectivewits.com"><img src="Images/logo1.jpg" width="104" height="45" border="0"></a> 
+</div>
+</body>
+</html>

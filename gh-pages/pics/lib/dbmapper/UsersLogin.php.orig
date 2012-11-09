@@ -1,0 +1,38 @@
+<?php
+
+require_once "Connect.php";
+
+class UsersLogin extends Connect{
+	
+	var $email;
+	var $cache;
+	var $cacheTime;
+
+	function UsersLogin (	$cache = 0, 
+							$cacheTime = 0, 
+							$persistent	= 0 ) {
+		parent::__construct($persistent);
+		$this->cache		= $cache;
+		$this->cacheTime	= $cacheTime;
+	}
+	
+	function insertToUL(	$email,
+							$passwd ) {
+		
+			$insertQuery = "INSERT INTO UsersLogin (email,password)
+				            VALUES ('$email',MD5('$passwd'))";
+			parent::executeQuery($insertQuery);	
+	} 
+
+	/*
+	*	username = unique email
+	*/
+	function emailPasswd (	$username,
+							$password	) {
+		$query = "SELECT email,password from UsersLogin WHERE email='$username' AND password=MD5('$password')";
+		$info = parent::query($query);
+		return parent::validate($info,0);
+	}
+
+}/*end class*/
+?>

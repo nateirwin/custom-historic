@@ -1,0 +1,124 @@
+<html>
+
+<head>
+	<title>MagickCompositeImage</title>
+</head>
+
+<link rel="stylesheet" href="./style.css" type="text/css">
+
+<body>
+
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td height="1" valign="top">
+		<table class="head_foot" width="100%" border="0" cellpadding="5" cellspacing="0">
+		<tr>
+			<td width="30%" align="left" valign="bottom"><br /><a href="./MagickCompareImages.html">Prev</a></td>
+			<td width="40%" align="center" valign="top"><strong>MagickWand For PHP<br />Manual</strong><br /></td>
+			<td width="30%" align="right" valign="bottom"><br /><a href="./MagickConstituteImage.html">Next</a></td>
+		</tr>
+		</table>
+	</td>
+</tr>
+
+<tr>
+	<td valign="top">
+
+<div class="main">
+<h1>MagickCompositeImage</h1>
+
+<p>MagickCompositeImage -- composites one image onto another at the specified offset
+</p>
+
+<h2>Description</h2>
+
+<p>bool <strong>MagickCompositeImage</strong>( MagickWand mgck_wnd, MagickWand composite_wnd, int composite_operator, int x, int y )
+</p>
+
+<pre>Composites one image onto another at the specified offset.
+
+composite_operator must be a CompositeOperator constant, one of the
+following:
+   MW_NoCompositeOp              MW_AddCompositeOp
+   MW_AtopCompositeOp            MW_BlendCompositeOp
+   MW_BumpmapCompositeOp         MW_ClearCompositeOp
+   MW_ColorBurnCompositeOp       MW_ColorDodgeCompositeOp
+   MW_ColorizeCompositeOp        MW_CopyBlackCompositeOp
+   MW_CopyBlueCompositeOp        MW_CopyCompositeOp
+   MW_CopyCyanCompositeOp        MW_CopyGreenCompositeOp
+   MW_CopyMagentaCompositeOp     MW_CopyOpacityCompositeOp
+   MW_CopyRedCompositeOp         MW_CopyYellowCompositeOp
+   MW_DarkenCompositeOp          MW_DstAtopCompositeOp
+   MW_DstCompositeOp             MW_DstInCompositeOp
+   MW_DstOutCompositeOp          MW_DstOverCompositeOp
+   MW_DifferenceCompositeOp      MW_DisplaceCompositeOp
+   MW_DissolveCompositeOp        MW_ExclusionCompositeOp
+   MW_HardLightCompositeOp       MW_HueCompositeOp
+   MW_InCompositeOp              MW_LightenCompositeOp
+   MW_LuminizeCompositeOp        MW_MinusCompositeOp
+   MW_ModulateCompositeOp        MW_MultiplyCompositeOp
+   MW_OutCompositeOp             MW_OverCompositeOp
+   MW_OverlayCompositeOp         MW_PlusCompositeOp
+   MW_ReplaceCompositeOp         MW_SaturateCompositeOp
+   MW_ScreenCompositeOp          MW_SoftLightCompositeOp
+   MW_SrcAtopCompositeOp         MW_SrcCompositeOp
+   MW_SrcInCompositeOp           MW_SrcOutCompositeOp
+   MW_SrcOverCompositeOp         MW_SubtractCompositeOp
+   MW_ThresholdCompositeOp       MW_XorCompositeOp</pre>
+
+<hr align="left" width="400" height="1" />
+
+<p>A description of each parameter follows:
+
+<br /><br /><table border="1" cellpadding="5" cellspacing="0">
+		<tr>
+			<td><strong>mgck_wnd</strong></td>
+			<td>A MagickWand resource
+			</td>
+		</tr>
+		<tr>
+			<td><strong>composite_wnd</strong></td>
+			<td>Image to composite is obtained from the current active image of this MagickWand resource.
+			</td>
+		</tr>
+		<tr>
+			<td><strong>compose</strong></td>
+			<td>This operator affects how the composite is applied to the image.
+				<br />The default is MW_OverCompositeOp.
+			</td>
+		</tr>
+		<tr>
+			<td><strong>x_offset</strong></td>
+			<td>The column offset of the composited image.
+			</td>
+		</tr>
+		<tr>
+			<td><strong>y_offset</strong></td>
+			<td>The row offset of the composited image
+			</td>
+		</tr>
+</table>
+</p>
+
+<br />
+</div>
+
+	</td>
+</tr>
+
+<tr>
+	<td height="1" valign="bottom">
+		<table class="head_foot" width="100%" border="0" cellpadding="5" cellspacing="0">
+		<tr>
+			<td width="30%" align="left" valign="bottom"><a href="./MagickCompareImages.html">Prev</a><br />MagickCompareImages</td>
+			<td width="40%" align="center" valign="middle"><a href="./index.html">Up</a></td>
+			<td width="30%" align="right" valign="bottom"><a href="./MagickConstituteImage.html">Next</a><br />MagickConstituteImage</td>
+		</tr>
+		</table>
+	</td>
+</tr>
+</table>
+
+</body>
+</html>
+

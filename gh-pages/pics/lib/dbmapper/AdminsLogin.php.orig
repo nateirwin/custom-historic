@@ -1,0 +1,33 @@
+<?php
+
+require_once "Connect.php";
+
+class AdminsLogin extends Connect{
+	
+	var $cache;
+	var $cacheTime;
+
+	function AdminsLogin (	$cache = 0, 
+							$cacheTime = 0, 
+							$persistent	= 0 ) {
+		parent::__construct($persistent);
+		$this->cache		= $cache;
+		$this->cacheTime	= $cacheTime;
+	}
+	
+	function insertToAL($email,
+						$passwd) {
+		$insertQuery = "INSERT INTO AdminsLogin (email,passwd)
+			            VALUES ('$email',MD5('$passwd'))";
+		parent::executeQuery($insertQuery);	
+	} 
+
+	function emailPasswd (	$email,
+							$passwd	) {
+		$query = "SELECT email,password from AdminsLogin WHERE email='$email' AND passwd=MD5('$passwd')";
+		$info = parent::query($query);
+		return parent::validate($info,0);
+	}
+
+}/*end class*/
+?>

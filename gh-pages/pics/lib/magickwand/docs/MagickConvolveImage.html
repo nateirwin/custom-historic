@@ -1,0 +1,99 @@
+<html>
+
+<head>
+	<title>MagickConvolveImage</title>
+</head>
+
+<link rel="stylesheet" href="./style.css" type="text/css">
+
+<body>
+
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td height="1" valign="top">
+		<table class="head_foot" width="100%" border="0" cellpadding="5" cellspacing="0">
+		<tr>
+			<td width="30%" align="left" valign="bottom"><br /><a href="./MagickContrastImage.html">Prev</a></td>
+			<td width="40%" align="center" valign="top"><strong>MagickWand For PHP<br />Manual</strong><br /></td>
+			<td width="30%" align="right" valign="bottom"><br /><a href="./MagickCropImage.html">Next</a></td>
+		</tr>
+		</table>
+	</td>
+</tr>
+
+<tr>
+	<td valign="top">
+
+<div class="main">
+<h1>MagickConvolveImage</h1>
+
+<p>MagickConvolveImage -- applies a custom convolution kernel to the current active image, or to one or more image channels
+</p>
+
+<h2>Description</h2>
+
+<p>bool <strong>MagickConvolveImage</strong>( MagickWand mgck_wnd, array kernel_array [, int channel_type] )
+</p>
+
+<pre>Applies a custom convolution kernel to the current active image in the
+MagickWand.
+
+Returns TRUE on success, FALSE if an error occurred.
+
+If the optional channel_type parameter is supplied,
+<a href="./MagickConvolveImageChannel.html">MagickConvolveImageChannel()</a> is called on the specified image channel.
+
+channel_type must be a ChannelType constant, one of the following:
+   MW_RedChannel        MW_CyanChannel
+   MW_GreenChannel      MW_MagentaChannel
+   MW_BlueChannel       MW_YellowChannel
+   MW_AlphaChannel      MW_OpacityChannel
+   MW_BlackChannel      MW_IndexChannel
+   MW_AllChannels</pre>
+
+<hr align="left" width="400" height="1" />
+
+<p>A description of each parameter follows:
+
+<br /><br /><table border="1" cellpadding="5" cellspacing="0">
+		<tr>
+			<td><strong>mgck_wnd</strong></td>
+			<td>A MagickWand resource
+			</td>
+		</tr>
+		<tr>
+			<td><strong>kernel_array</strong></td>
+			<td>An array of doubles representing the convolution kernel; it's length MUST be
+				<br />perfectly square, i.e. it must contain 4, 9, 16, 25, 36, 49, 64, ... elements
+			</td>
+		</tr>
+		<tr>
+			<td><strong>channel_type</strong></td>
+			<td>(OPTIONAL) ChannelType constant
+			</td>
+		</tr>
+</table>
+</p>
+
+<br />
+</div>
+
+	</td>
+</tr>
+
+<tr>
+	<td height="1" valign="bottom">
+		<table class="head_foot" width="100%" border="0" cellpadding="5" cellspacing="0">
+		<tr>
+			<td width="30%" align="left" valign="bottom"><a href="./MagickContrastImage.html">Prev</a><br />MagickContrastImage</td>
+			<td width="40%" align="center" valign="middle"><a href="./index.html">Up</a></td>
+			<td width="30%" align="right" valign="bottom"><a href="./MagickCropImage.html">Next</a><br />MagickCropImage</td>
+		</tr>
+		</table>
+	</td>
+</tr>
+</table>
+
+</body>
+</html>
+

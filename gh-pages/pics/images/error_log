@@ -1,0 +1,2 @@
+[09-Dec-2006 18:23:55] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/eagle/public_html/forum/conf_global.php:172) in Unknown on line 0
+[09-Dec-2006 18:23:55] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/eagle/public_html/forum/conf_global.php:172) in Unknown on line 0
