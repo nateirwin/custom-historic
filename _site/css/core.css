@@ -1,0 +1,31 @@
+html, body {
+  color: #222;
+  cursor: default;
+  font-family: "Georgia Pro", georgia, serif;
+}
+.navbar-inner {
+  background-color: #1C2D3F !important;
+  background-image: none !important;
+}
+.navbar-inverse .nav .active>a, .navbar-inverse .nav .active>a:hover, .navbar-inverse .nav .active>a:focus {
+  color: #fff;
+  font-weight: bold;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+a {
+  color: #005580;
+}
+footer {
+  background-color: #B3C4A4;
+  height: 30px;
+}
+@media (max-width: 767px) {
+  footer {
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}

@@ -1,0 +1,64 @@
+---
+
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include head.html %}
+    <link href="css/index.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container navbar-wrapper">
+      <div class="navbar navbar-inverse">
+        <div class="navbar-inner">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="/" style="color:white;">Custom & Historic Millwork</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li><a href="about.html">About</a></li>
+              <li><a href="products.html">Products</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="projects/">Projects</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container content">
+      <div class="header-img">
+        <img src="img/wood-panel.jpg">
+      </div>
+      <div class="jumbotron">
+        <h1>How will they know us without our past?</h1>
+        <p class="lead" style="margin-top:20px;text-align:left;">This question was posed in a book published by <a href="http://www.historicdenver.org">Historic Denver</a>. It reflects on the importance of preserving our heritage. We believe that no object, large or small, is insignificant. Too many things are lost or forgotten in our busy lifestyles, and it is critical we remember the past is the key to our future. What we have been makes us who we are.</p>
+        <a class="btn btn-large btn-success" href="about.html">Read more</a>
+      </div>
+      <hr>
+      <div class="row-fluid" style="text-align:center;">
+        <h2>Our Mission</h2>
+      </div>
+      <div class="row-fluid">
+        <div class="span4">
+          <p><span style="font-family:Georgia,'Times New Roman',Times,serif;font-size:24.5px;">1.</span>&nbsp;<span style="display:block;margin-left:25px;margin-top:-20px;">Restore or renovate residential and commercial properties of historical significance.</span></p>
+        </div>
+        <div class="span4">
+          <p><span style="font-family:Georgia,'Times New Roman',Times,serif;font-size:24.5px;">2.</span>&nbsp;<span style="display:block;margin-left:25px;margin-top:-20px;">Design and build custom cabinetry and furniture with genuine craftmanship and the finest materials available.</span></p>
+        </div>
+        <div class="span4">
+          <p><span style="font-family:Georgia,'Times New Roman',Times,serif;font-size:24.5px;">3.</span>&nbsp;<span style="display:block;margin-left:25px;margin-top:-20px;">Use the skills we've developed and acquired over more than forty years in the industry to achieve high quality and historical accuracy, while remaining sensitive to time and budget considerations.</span></p>
+        </div>
+      </div>
+    </div>
+    <footer class="container" style="padding:0 20px 0 20px;">
+      <p class="pull-right" style="margin:4px 0;"><a href="#">Back to top</a></p>
+      <p style="margin:4px 0;">&copy; {{ 'now' | date: "%Y" }} Custom & Historic Millwork, LLC</p>
+    </footer>
+    {% include scripts.html %}
+  </body>
+</html>

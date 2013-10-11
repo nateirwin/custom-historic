@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include head.html %}
+    <style>
+      .content {
+        padding-top: 60px;
+      }
+      @media (max-width: 979px) {
+        .content {
+          padding-top: 0;
+        }
+      }
+      @media (max-width: 767px) {
+        .content {
+          padding-top: 0;
+        }
+      }
+    </style>
+    <link href="/css/page.css" rel="stylesheet">
+    <style>
+      #galleria {
+        height: 452px;
+      }
+    </style>
+    {% if page.title == 'Project' %}
+    <title>Projects | Custom & Historic Millwork</title>
+    {% else %}
+    <title>{{ page.title }} | Projects | Custom & Historic Millwork</title>
+    {% endif %}
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+          <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </a>
+            <a class="brand" href="/">Custom & Historic Millwork</a>
+            <div class="nav-collapse collapse">
+              <ul class="nav">
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/products.html">Products</a></li>
+                <li><a href="/services.html">Services</a></li>
+                <li class="active"><a href="/projects/">Projects</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container content">
+        {{ page.content }}
+        <div id="push"></div>
+      </div>
+    </div>
+    <footer>
+      <div class="container">
+        <p class="pull-right" style="margin:6px 0 0 0;"><a href="#">Back to top</a></p>
+        <p style="margin:6px 0 0 0;">&copy; {{ 'now' | date: "%Y" }} Custom & Historic Millwork, LLC</p>
+      </div>
+    </footer>
+    {% include scripts.html %}
+    <script src="/libs/galleria/galleria-1.2.9.min.js"></script>
+    <script>
+      if (document.getElementById('galleria')) {
+        Galleria.loadTheme('/libs/galleria/themes/classic/galleria.classic.min.js');
+        Galleria.run('#galleria');
+      }
+    </script>
+  </body>
+</html>

@@ -1,8 +1,0 @@
-// $Id$
-// vim:ft=javascript
-
-ARG_WITH("magickwand", "for magickwand support", "no");
-
-if (PHP_MAGICKWAND != "no") {
-	EXTENSION("magickwand", "magickwand.c");
-}
